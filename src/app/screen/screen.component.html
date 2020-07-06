@@ -1,0 +1,41 @@
+<div class="container container-fluid">
+    <div class="top-row screen-border">
+        <div class="d-flex flex-row justify-content-between">
+            <div class="col">
+                <small>time</small>
+            </div>
+            <div class="col float-right">
+                <small>battery</small>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-1">
+                <img id="chevron" src="../assets/icons/left-chevron-blue.png" alt="left-arrow" height="18">
+            </div>
+            <div class="col-md-10 d-flex justify-content-center">
+                <div class="contact-circle">
+                    <div class="sendee-initials mt-2" style="color: white;">
+                        <h6> {{ sendeeInitials}} </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <p id="contact-name" class="mt-1">{{ sendee }}></p>
+            </div>
+        </div>
+    </div>
+    <div class="screen-body screen-border p-1">
+        this is in the screen
+        <div class="container-fluid mt-5">
+            <div [ngClass]="text.from" class="col-md-10 text my-1 px-1" *ngFor="let text of texts; let i = index">
+                <small>{{ text.text }}</small>
+            </div>
+        </div>
+
+    </div>
+    
+</div>
