@@ -10,14 +10,17 @@
     border-radius: 20px 20px 20px 20px;
     height: 600px;
     width: 337px;
-    background-color: white;
+    background-color:  white; 
     border-bottom-color: black;
 }
 
+.container {
+    height: 600px;
+}
 .top-row {
     z-index: 10;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(242, 242, 247);
     height: 90px;
     width: 337px;
     border-radius: 20px 20px 0px 0px;
@@ -54,4 +57,12 @@
 
 .text {
     border-radius: 7px;
+}
+
+.text-container {
+    margin-top: 90px;
+}
+
+#right-chevron {
+    margin-top: 6px;
 }
