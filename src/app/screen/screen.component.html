@@ -31,12 +31,19 @@
     </div>
     <div class="screen-body screen-border p-1">
         <div class="container-fluid text-container">
-            <div [ngClass]="text.from" class="col-md-10 text my-1 px-1" *ngFor="let text of texts; let i = index">
-                <small>{{ text.text }}</small>
+            <div class="col-md-10 text my-1 px-1" *ngFor="let text of texts; let i = index" [ngClass]="text.from">
+                <div class="d-flex flex-row px-0 mx-0" [ngClass]="text.from">
+                    <img *ngIf="text.from==='you'" id="gray-left" src="../assets/icons/gray-left.png" height="32" >
+                    <div [ngClass]="'text-' + text.from" class="pt-1">
+                        <small>{{ text.text }}</small>
+                </div>
+                    <img *ngIf="text.from==='me'" id="blue-right" src="../assets/icons/blue-right.png" height="32" >
+                </div>
             </div>
         </div>
-
     </div>
+
+ 
     
 
 </div>
