@@ -3,6 +3,8 @@
 $font-family-base: "Roboto", sans-serif; // add this line first before importing bootstrap
 
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+
+$primary: rgb(0, 122, 255);
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
 

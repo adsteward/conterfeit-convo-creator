@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ScreenComponent implements OnInit {
   @Input() sendee: string;
-  @Input() texts: any;
+  @Input() texts: any[];
   @Input() time: string;
   @Input() initials: string;
   @Input() signal: number;
@@ -21,28 +21,9 @@ export class ScreenComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    // this.signalPath = `../assets/signal/cell-bars-${this.signal}.png`;
-    // console.log(this.signalPath);
+  ngOnInit(): void {}
+
+  removeText(index: number) {
+    this.texts.splice(index, 1);
   }
-
-  ngOnUpdate(): void {
-    // this.signalPath = `../assets/signal/cell-bars-${this.signal}.png`;
-    // console.log(this.signalPath);
-  }
-
-  // get sendeeInitials(): string {
-  //   return "AS";
-  // }
-
-  // get texts(): any{
-  //   return [
-  //     { from: 'me', text: 'hey'},
-  //     { from: 'you', text: 'what'},
-  //     { from: 'me', text: 'omg'},
-  //     { from: 'me', text: 'how does this look?'},
-  //     { from: 'you', text: 'what about this longer line so long almost too long?'},
-  //     { from: 'me', text: 'bad'}
-  //   ]
-  // }
 }

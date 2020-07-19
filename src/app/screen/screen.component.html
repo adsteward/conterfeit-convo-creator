@@ -80,9 +80,10 @@
         [ngClass]="text.from"
       >
         <div
-          class="d-flex flex-row flex-wrap px-0 mx-0 justify-content-end"
+          class="d-flex flex-row flex-wrap px-0 mx-0"
           [ngClass]="{
-            'adtnl-spacing': texts[i - 1]?.from !== texts[i].from
+            'adtnl-spacing': texts[i - 1]?.from !== texts[i].from,
+            'justify-content-end': text.from === 'me'
           }"
         >
           <img
@@ -95,6 +96,20 @@
           <div class="text.from" [ngClass]="'text-' + text.from" class="pr-3">
             <small>{{ text.text }}</small>
           </div>
+          <img
+            class="trash"
+            *ngIf="remove && text.from === 'me'"
+            src="../assets/icons/trash-gray-sq.png"
+            height="24"
+            (click)="removeText(i)"
+          />
+          <img
+            class="your-trash"
+            *ngIf="remove && text.from === 'you'"
+            src="../assets/icons/trash-gray-sq.png"
+            height="24"
+            (click)="removeText(i)"
+          />
           <img
             class="btn-end"
             *ngIf="text.from === 'me' && texts[i + 1]?.from !== 'me'"

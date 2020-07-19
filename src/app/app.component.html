@@ -57,8 +57,13 @@
             </div>
           </div>
           <div class="row mt-5">
-            <button class="btn btn-danger btn-block" type="button">
-              Remove a Message
+            <button
+              class="btn btn-block"
+              [ngClass]="remove ? 'btn-primary' : 'btn-danger'"
+              type="button"
+              (click)="remove = !remove"
+            >
+              {{ remove ? "Done" : "Remove a Message" }}
             </button>
           </div>
         </div>
