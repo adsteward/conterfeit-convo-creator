@@ -1,6 +1,6 @@
 # counterfeit convo creator
 ever needed to trick an incredibly gullible friend (or enemy) AND totally forgotten that it's very easy to change a contact's name?
-well do i have the thing for you!
+/n well do i have the thing for you!
 
 
 
