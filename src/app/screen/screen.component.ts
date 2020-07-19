@@ -11,10 +11,25 @@ export class ScreenComponent implements OnInit {
   @Input() texts: any;
   @Input() time: string;
   @Input() initials: string;
+  @Input() signal: number;
+  @Input() wifi: number;
+  @Input() battery: string;
+  @Input() airplane: boolean;
+  @Input() remove: boolean;
+  // signalPath: string;
+  // wifiPath: string;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // this.signalPath = `../assets/signal/cell-bars-${this.signal}.png`;
+    // console.log(this.signalPath);
+  }
+
+  ngOnUpdate(): void {
+    // this.signalPath = `../assets/signal/cell-bars-${this.signal}.png`;
+    // console.log(this.signalPath);
+  }
 
   // get sendeeInitials(): string {
   //   return "AS";

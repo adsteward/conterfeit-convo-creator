@@ -9,11 +9,16 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent {
   title = 'fimessage';
   sendee: string = '';
-  time: string = '';
+  time: string = '11:11';
   newTextBox = false;
   texts: any = [];
   text: string;
   initials: string = '';
+  signal = 4;
+  wifi = 3;
+  battery = 'full';
+  airplane = false;
+  remove = false;
 
   sendText(from: string) {
     if (this.text !== undefined) {
