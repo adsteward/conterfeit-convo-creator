@@ -4,20 +4,18 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-screen',
   templateUrl: './screen.component.html',
-  styleUrls: ['./screen.component.scss']
+  styleUrls: ['./screen.component.scss'],
 })
 export class ScreenComponent implements OnInit {
   @Input() sendee: string;
-  @Input() texts: any
+  @Input() texts: any;
   @Input() time: string;
   @Input() initials: string;
 
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-  
   // get sendeeInitials(): string {
   //   return "AS";
   // }

@@ -1,77 +1,90 @@
 .screen-border {
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    border-bottom-color: rgb(209, 209, 214);
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-bottom-color: rgb(209, 209, 214);
 }
 .screen-body {
-    z-index: 1;
-    position: absolute;
-    border-radius: 20px 20px 20px 20px;
-    height: 600px;
-    width: 337px;
-    background-color:  white; 
-    border-bottom-color: black;
+  z-index: 1;
+  position: absolute;
+  border-radius: 20px 20px 20px 20px;
+  height: 600px;
+  width: 337px;
+  background-color: white;
+  border-bottom-color: black;
 }
 
 .container {
-    height: 600px;
+  height: 600px;
+  padding-right: 350px;
 }
 .top-row {
-    z-index: 10;
-    position: absolute;
-    background-color: rgb(242, 242, 247);
-    height: 90px;
-    width: 337px;
-    border-radius: 20px 20px 0px 0px;
-} 
+  z-index: 10;
+  position: absolute;
+  background-color: rgb(242, 242, 247);
+  height: 90px;
+  width: 337px;
+  border-radius: 20px 20px 0px 0px;
+}
 
 .contact-circle {
-    border-radius: 50%;
-    background-color: rgb(142, 142, 147);
-    width: 30px;
-    height: 30px;
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    text-align: center; 
+  border-radius: 50%;
+  background-color: rgb(142, 142, 147);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 #contact-name {
-    font-size: 8px;
-    font-weight: 100;
-    padding-left: 5px;
+  font-size: 8px;
+  font-weight: 100;
+  padding-left: 5px;
 }
 
 .me {
-    float: right; 
+  float: right;
 }
 
 .you {
-    float: left;
+  float: left;
 }
 
 .text-you {
-    background-color: rgb(209, 209, 214);
-    border-radius: 0px 15px 15px 0px;
-    padding-left: 0px;
-    padding-right: 12px;
+  background-color: rgb(209, 209, 214);
+  border-radius: 0px 15px 15px 0px;
+  padding-left: 0px;
+  padding-right: 12px;
 }
 
 .text-me {
-    background-color: rgb(10, 120, 255);
-    color: white;
-    border-radius: 15px 0px 0px 15px;
-    padding-right: 0px;
-    padding-left: 12px;
+  background-color: rgb(10, 120, 255);
+  color: white;
+  border-radius: 15px 15px 15px 15px;
+  padding-right: 0px;
+  padding-left: 12px;
 }
 
-
-
 .text-container {
-    margin-top: 90px;
+  margin-top: 90px;
 }
 
 #right-chevron {
-    margin-top: 6px;
+  margin-top: 6px;
+}
+
+.text-box {
+  position: relative;
+}
+
+.btn-end {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.text-bubble {
+  margin-right: 5px;
 }

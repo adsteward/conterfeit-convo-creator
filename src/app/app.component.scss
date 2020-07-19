@@ -1,0 +1,44 @@
+.app-container {
+  background: url("background_4.png");
+
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 100px;
+}
+.to-btn {
+  background-color: rgb(209, 209, 214);
+}
+
+.from-btn {
+  background-color: rgb(10, 120, 255);
+  color: white;
+}
+
+.footer {
+  background-color: gb(209, 209, 214);
+}
+
+.header {
+  background-color: rgb(10, 120, 255);
+  color: white;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.header-cont {
+  text-align: center;
+  //width: 75%;
+}
+
+// .h3 {
+//   display: inline-block;
+// }
+
+// .screen-col {
+//   column-width: 168px;
+// }

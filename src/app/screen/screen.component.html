@@ -1,49 +1,71 @@
-<div class="container container-fluid d-flex mt-5">
-    <div class="top-row screen-border">
-        <div class="d-flex flex-row justify-content-between">
-            <div class="col">
-                <small>{{ time }}</small>
-            </div>
-            <div class="col float-right">
-                <small>battery</small>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-1">
-                <img id="chevron" src="../assets/icons/left-chevron-blue.png" alt="left-arrow" height="18">
-            </div>
-            <div class="col-md-10 d-flex justify-content-center">
-                <div class="contact-circle">
-                    <div class="sendee-initials mt-2" style="color: white;">
-                        <h6> {{ initials}} </h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-1">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col d-flex justify-content-center">
-                <p id="contact-name" class="mt-1">{{ sendee }}</p>
-                <img id="right-chevron" src="../assets/icons/right-chevron-darker-gray.png" height="7">
-            </div>
-        </div>
+<div class="container container-fluid d-flex mt-4">
+  <div class="top-row screen-border">
+    <div class="d-flex flex-row justify-content-between">
+      <div class="col">
+        <small>{{ time }}</small>
+      </div>
+      <div class="col float-right">
+        <small>battery</small>
+      </div>
     </div>
-    <div class="screen-body screen-border p-1">
-        <div class="container-fluid text-container">
-            <div class="col-md-10 text my-1 px-1" *ngFor="let text of texts; let i = index" [ngClass]="text.from">
-                <div class="d-flex flex-row px-0 mx-0" [ngClass]="text.from">
-                    <img *ngIf="text.from==='you'" id="gray-left" src="../assets/icons/gray-left.png" height="32" >
-                    <div [ngClass]="'text-' + text.from" class="pt-1">
-                        <small>{{ text.text }}</small>
-                </div>
-                    <img *ngIf="text.from==='me'" id="blue-right" src="../assets/icons/blue-right.png" height="32" >
-                </div>
-            </div>
+    <div class="row mt-3">
+      <div class="col-md-1">
+        <img
+          id="chevron"
+          src="../assets/icons/chevron-left-blue.png"
+          alt="left-arrow"
+          height="18"
+        />
+      </div>
+      <div class="col-md-10 d-flex justify-content-center">
+        <div class="contact-circle">
+          <div class="sendee-initials mt-2" style="color: white;">
+            <h6>{{ initials }}</h6>
+          </div>
         </div>
+      </div>
+      <div class="col-md-1"></div>
     </div>
-
- 
-    
-
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <p id="contact-name" class="mt-1">{{ sendee }}</p>
+        <img
+          id="right-chevron"
+          src="../assets/icons/right-chevron-darker-gray.png"
+          height="7"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="screen-body screen-border p-1">
+    <div class="container-fluid text-container">
+      <div
+        class="col-md-10 text my-1 px-1"
+        *ngFor="let text of texts; let i = index"
+        [ngClass]="text.from"
+      >
+        <div class="d-flex flex-row px-0 mx-0 text-box" [ngClass]="text.from">
+          <img
+            *ngIf="text.from === 'you'"
+            id="gray-left"
+            src="../assets/icons/gray-left.png"
+            height="32"
+          />
+          <div
+            [ngClass]="'text-' + text.from"
+            class="pt-1 text-bubble pr-3 flex-grow-1"
+          >
+            <small>{{ text.text }}</small>
+          </div>
+          <img
+            class="btn-end"
+            *ngIf="text.from === 'me'"
+            id="blue-right"
+            src="../assets/icons/blue-bubble-end.png"
+            height="28"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

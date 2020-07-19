@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-$font-family-base: 'Roboto', sans-serif; // add this line first before importing bootstrap
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+$font-family-base: "Roboto", sans-serif; // add this line first before importing bootstrap
 
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
+// html {
+//   background-image: url("background_1.png");
+//   background-repeat: no-repeat;
+// }
