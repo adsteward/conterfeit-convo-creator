@@ -37,32 +37,33 @@
       </div>
     </div>
   </div>
-  <div class="screen-body screen-border p-1">
+  <div class="screen-body screen-border pt-1">
     <div class="container-fluid text-container">
       <div
-        class="col-md-10 text my-1 px-1"
+        class="col-md-9 text px-0"
         *ngFor="let text of texts; let i = index"
         [ngClass]="text.from"
       >
-        <div class="d-flex flex-row px-0 mx-0 text-box" [ngClass]="text.from">
+        <div
+          class="d-flex flex-row px-0 mx-0 text-box flex-wrap"
+          [ngClass]="{ 'adtnl-spacing': texts[i - 1]?.from !== texts[i].from }"
+        >
           <img
-            *ngIf="text.from === 'you'"
+            class="btn-start"
+            *ngIf="text.from === 'you' && texts[i + 1]?.from !== 'you'"
             id="gray-left"
-            src="../assets/icons/gray-left.png"
-            height="32"
+            src="../assets/icons/gray-bubble-end.png"
+            height="24"
           />
-          <div
-            [ngClass]="'text-' + text.from"
-            class="pt-1 text-bubble pr-3 flex-grow-1"
-          >
+          <div [ngClass]="'text-' + text.from" class="pr-3 flex-grow-1">
             <small>{{ text.text }}</small>
           </div>
           <img
             class="btn-end"
-            *ngIf="text.from === 'me'"
+            *ngIf="text.from === 'me' && texts[i + 1]?.from !== 'me'"
             id="blue-right"
             src="../assets/icons/blue-bubble-end.png"
-            height="28"
+            height="24"
           />
         </div>
       </div>

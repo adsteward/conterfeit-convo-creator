@@ -53,18 +53,26 @@
 }
 
 .text-you {
-  background-color: rgb(209, 209, 214);
-  border-radius: 0px 15px 15px 0px;
-  padding-left: 0px;
+  background-color: rgb(229, 229, 234); //rgb(209, 209, 214);
+  border-radius: 15px 15px 15px 15px;
+  padding-left: 12px;
   padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-left: 4px;
+  line-height: 1em;
 }
 
 .text-me {
   background-color: rgb(10, 120, 255);
   color: white;
   border-radius: 15px 15px 15px 15px;
-  padding-right: 0px;
+  padding-right: 12px;
   padding-left: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-right: 4px;
+  line-height: 1em;
 }
 
 .text-container {
@@ -85,6 +93,16 @@
   right: 0;
 }
 
-.text-bubble {
-  margin-right: 5px;
+.btn-start {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.text {
+  margin-top: 1px;
+}
+
+.adtnl-spacing {
+  margin-top: 0.4em;
 }
