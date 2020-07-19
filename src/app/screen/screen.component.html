@@ -34,7 +34,12 @@
           height="15"
         />
 
-        <small *ngIf="wifi === 4 && !airplane">LTE</small>
+        <small
+          *ngIf="wifi === 4 && !airplane"
+          class="pr-1"
+          style="line-height: 15px;"
+          >LTE</small
+        >
 
         <img
           id="battery"
