@@ -75,15 +75,14 @@
   <div class="screen-body screen-border pt-1">
     <div class="container-fluid text-container">
       <div
-        class="col-md-9 text px-0"
+        class="col-md-9 text px-0 text-box"
         *ngFor="let text of texts; let i = index"
         [ngClass]="text.from"
       >
         <div
-          class="d-flex flex-row px-0 mx-0 text-box flex-wrap"
+          class="d-flex flex-row flex-wrap px-0 mx-0 justify-content-end"
           [ngClass]="{
-            'adtnl-spacing': texts[i - 1]?.from !== texts[i].from,
-            'justify-content-end': text.from === 'me'
+            'adtnl-spacing': texts[i - 1]?.from !== texts[i].from
           }"
         >
           <img
@@ -93,11 +92,7 @@
             src="../assets/icons/gray-bubble-end.png"
             height="24"
           />
-          <div
-            class="text.from"
-            [ngClass]="'text-' + text.from"
-            class="pr-3 flex-grow-1"
-          >
+          <div class="text.from" [ngClass]="'text-' + text.from" class="pr-3">
             <small>{{ text.text }}</small>
           </div>
           <img
